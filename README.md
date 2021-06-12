@@ -1,0 +1,1 @@
+# Accordion-ready-for-styling

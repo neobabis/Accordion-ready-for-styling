@@ -11,6 +11,8 @@ if (nb_accordions) {
         let labels = nb_accordion.querySelectorAll("[data-nb_accordion_label]");
 
         labels.forEach((label) => {
+            if (label.closest("[data-nb_accordion_item]").classList.contains("active")) label.nextElementSibling.style.maxHeight = `${label.nextElementSibling.scrollHeight}px`;
+            
             label.addEventListener("click", () => {
                 if (nb_accordion.hasAttribute("data-nb_accordion_open_only_one")) {
                     let all_active = nb_accordion.querySelectorAll("[data-nb_accordion_item].active");
